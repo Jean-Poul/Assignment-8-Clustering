@@ -46,7 +46,15 @@ Reference: [SKlearn Doc](https://scikit-learn.org/stable/auto_examples/cluster/p
 
 
 ### Task 5, Which algorithm is good for large datasets and which one is good for regions of high density 
+The K-Means algorithm is good for large datasets, even though one might think otherwise as it will be slower because the algorithm has to run multiple times. But it wouldn't actually be that slow.
+The DBSCAN algorithm is the one to use for regions of high density as it a density-based clustering algorithm. It forms dense clusters and leaves out the ouliers meaning the low-density areas. It is also good to use here because it works well with odd shaped clusters and therefore knows when an outlier is an outlier compared to K-Means which can have some difficulties with it.
 
 ### Task 6, What does ‘high density mean’ in DBSCAN
+High-density means that there are many datapoints close to eachother in a cluster. When datapoints aren't high-density they are low-density which means that they are outliers to this cluster and therefore categorised as noise. It is quite important to differentiate between the densities as DBSCAN stands for Density Based Spatial Clustering of Applications with Noise and therefore has a focus on the densities and clustering.
+
 ### Task 7, Describe with an example how the initialisation of K Means can affect the inertia value and the quality of the model.
+The problem with the initilization of K Means is placing the initial cluster centers as close to the optimal center as possible. However the optimal center is not known, that is after all what we are trying to find. In most k-means algorithms the start positions is randomly chosen and the centers are then improved with each iteration. However these randomly chosen start points can vary alot and can result in more iterations needed and therefore longer runtime.   
+
+![Iterating the K-Means algorithms to find the best K Value](https://miro.medium.com/max/480/1*KrcZK0xYgTa4qFrVr0fO2w.gif)
+
 ### Task 8,
