@@ -58,4 +58,5 @@ There are other initilization methods such and k-means++ and naive sharding that
 
 ![Iterating the K-Means algorithms to find the best K Value](https://miro.medium.com/max/480/1*KrcZK0xYgTa4qFrVr0fO2w.gif)
 
-### Task 8,
+### Task 8, Prepare a model using K Means for the Olivetti data set from scikit learn
+See the notebook file for a walkthrough of clustering and preprocessing with the Olivetti dataset.
