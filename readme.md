@@ -31,7 +31,8 @@ Clustering is a technique used in machine learning to group data together. Usual
 ### Task 4, Describe with examples of plotting two ways of selecting the value of K for K-means clustering
 
 
-### Task 5, Describe with an example how the initialisation of K Means can affect the inertia value and the quality of the model
+### Task 5, Which algorithm is good for large datasets and which one is good for regions of high density 
+
 ### Task 6,
 ### Task 7,
 ### Task 8,
