@@ -34,7 +34,7 @@ The elbow method uses the sum of squared errors(between each point and the mean 
 ![Elbow Method taken from the Walkthrough in the book](https://user-images.githubusercontent.com/21145015/163997780-e0f2ea14-8b56-4aec-a3eb-bec2292cb878.jpg)
 
 #### Silhouette method
-The silhouette method uses the seperation distance between clusters. The measurement is between -1 & 1, where 1 is preffered. With a higher score the values in the clusters are well seperated, whereas negative values mean that the clusters are very close together and might indicate that values have been assigned to a wrong cluster. That means the optimal K value will the one with the highest silhouette score. However we might also consider the size of each cluster and decide another "worse" K value where the clusters are more evenly distributed.
+The silhouette method uses the seperation distance between clusters. The measurement is between -1 & 1, where 1 is preffered. With a higher score the values in the clusters are well seperated, whereas negative values mean that the clusters are very close together and might indicate that values have been assigned to a wrong cluster. That means the optimal K value will be the one with the highest silhouette score. However we might also consider the size of each cluster and decide another "worse" K value where the clusters are more evenly distributed.
 
 The following screenshots are from the Sklearn documentation. In this example (depending on the use case) K=4 is the better option, event though 2 has a higher silhouette value, because the clusters are much more evenly distributed with K=4 than with K=2.
 ![Silhouette with K2](https://user-images.githubusercontent.com/21145015/164001923-6c0bb60d-d148-48d8-8f0b-378fb598c055.jpg)
