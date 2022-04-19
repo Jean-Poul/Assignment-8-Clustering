@@ -24,19 +24,19 @@ It also works extremely well with finding outliers and when working with irregul
 The DBSCAN algorithm can be used to find associations and structures in data that are hard to find manually but that can be relevant and useful to find patterns and predict trends. 
 
 ### Task 3, Thinking about these two algorithms provide a formal definition of clustering
-Clustering is a technique used in machine learning to group data together. Usually, if the algorithm is used correctly, data with similiar characteristics(features) will be grouped together. And likewise data with dissimiliar characteristics should not be grouped together. These grouped are referred to as clusters.
+Clustering is a technique used in machine learning to group data together. Usually, if the algorithm is used correctly, data with similiar characteristics(features) will be grouped together. And likewise data with dissimiliar characteristics should not be grouped together. These groupes are referred to as clusters.
 
 
 ### Task 4, Describe with examples of plotting two ways of selecting the value of K for K-means clustering
 #### Elbow method
-The elbow method uses the sum of squared errors(between each point and the mean of its cluster) to find the optimal K. The higher K you use the lower error rate you will get. However we also dont want to many clusters as we then lose any meaning in grouping the data together. Usually we will see an elbow in the graph, after this point higher K values will result in small improvement in the error value. Therefore we want to choose the K value that are just a the Elbow point.
+The elbow method uses the sum of squared errors(between each point and the mean of its cluster) to find the optimal K. The higher K you use the lower error rate you will get. However we also don't want to many clusters as we then lose any meaning in grouping the data together. Usually we will see an elbow in the graph, after this point higher K values will only result in small improvements in the error value. Therefore we want to choose the K value that is just at the Elbow point.
 
 ![Elbow Method taken from the Walkthrough in the book](https://user-images.githubusercontent.com/21145015/163997780-e0f2ea14-8b56-4aec-a3eb-bec2292cb878.jpg)
 
 #### Silhouette method
-The silhouette method uses the seperation distance between clusters. The measurement is between -1 & 1, where 1 is preffered. With a higher score the values in the clusters are well seperated, where as negative values means that the clusters are very close together and might indicate that values have been assigned to a wrong cluster. That means the optimal K value will the one with the highest silhouette score. However we might also consider the size of each cluster and decide another "worse" K value where the clusters are more evenly distributed.
+The silhouette method uses the seperation distance between clusters. The measurement is between -1 & 1, where 1 is preffered. With a higher score the values in the clusters are well seperated, whereas negative values mean that the clusters are very close together and might indicate that values have been assigned to a wrong cluster. That means the optimal K value will the one with the highest silhouette score. However we might also consider the size of each cluster and decide another "worse" K value where the clusters are more evenly distributed.
 
-The following screenshots are from the SKlearn documentation. In this example (depending on the use case) K=4 is the better option, event though 2 has a higher silhouette value, because the clusters are much more evenly distributed with K=4 than with K=2.
+The following screenshots are from the Sklearn documentation. In this example (depending on the use case) K=4 is the better option, event though 2 has a higher silhouette value, because the clusters are much more evenly distributed with K=4 than with K=2.
 ![Silhouette with K2](https://user-images.githubusercontent.com/21145015/164001923-6c0bb60d-d148-48d8-8f0b-378fb598c055.jpg)
 ![Silhouette with K4](https://user-images.githubusercontent.com/21145015/164001928-f500b389-c2bf-41b8-96ab-f83696746056.jpg)
 ![Results from 2-6 K values](https://user-images.githubusercontent.com/21145015/164001927-3dc5a8ae-a435-4f15-93b6-990cdf771ad7.jpg)
@@ -53,7 +53,8 @@ The DBSCAN algorithm is the one to use for regions of high density as it a densi
 High-density means that there are many datapoints close to eachother in a cluster. When datapoints aren't high-density they are low-density which means that they are outliers to this cluster and therefore categorised as noise. It is quite important to differentiate between the densities as DBSCAN stands for Density Based Spatial Clustering of Applications with Noise and therefore has a focus on the densities and clustering.
 
 ### Task 7, Describe with an example how the initialisation of K Means can affect the inertia value and the quality of the model.
-The problem with the initilization of K Means is placing the initial cluster centers as close to the optimal center as possible. However the optimal center is not known, that is after all what we are trying to find. In most k-means algorithms the start positions is randomly chosen and the centers are then improved with each iteration. However these randomly chosen start points can vary alot and can result in more iterations needed and therefore longer runtime.   
+The problem with the initilization of K-Means is placing the initial cluster centers as close to the optimal center as possible. However the optimal center is not known, that is after all what we are trying to find. In most k-means algorithms the start positions are randomly chosen and the centers are then improved with each iteration. However these randomly chosen start points can vary alot and can result in more iterations needed and therefore longer runtime.  
+There are other initilization methods such and k-means++ and naive sharding that aim to get better start positions for the center points, resulting in fewer iterations and better runtime. The preferred method in Sklearn library is "K-means++" that is build around pushing the start position centers as far away from eachother.
 
 ![Iterating the K-Means algorithms to find the best K Value](https://miro.medium.com/max/480/1*KrcZK0xYgTa4qFrVr0fO2w.gif)
 
