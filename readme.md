@@ -57,6 +57,7 @@ The problem with the initilization of K-Means is placing the initial cluster cen
 There are other initilization methods such and k-means++ and naive sharding that aim to get better start positions for the center points, resulting in fewer iterations and better runtime. The preferred method in Sklearn library is "K-means++" that is build around pushing the start position centers as far away from eachother.
 
 ![Iterating the K-Means algorithms to find the best K Value](https://miro.medium.com/max/480/1*KrcZK0xYgTa4qFrVr0fO2w.gif)
+The following illustration show k-means iterations to find the centeriod for K=3. [Reference](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68)
 
 ### Task 8, Prepare a model using K Means for the Olivetti data set from scikit learn
 See the notebook file for a walkthrough of clustering and preprocessing with the Olivetti dataset.
