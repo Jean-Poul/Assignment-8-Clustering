@@ -52,7 +52,7 @@ The DBSCAN algorithm is the one to use for regions of high density as it a densi
 ### Task 6, What does ‘high density mean’ in DBSCAN
 DBSCAN stands for Density Based Spatial Clustering of Applications with Noise. High-density means that there are many datapoints close to eachother in a cluster. When datapoints aren't high-density they are low-density which means that they are outliers to this cluster and therefore categorised as noise. The purpose in DBScan is to identify clusters of data as high-density and seperate outliers which is seen a low-density .
 
-### Task 7, Describe with an example how the initialisation of K Means can affect the inertia value and the quality of the model.
+### Task 7, Describe with an example how the initialization of K Means can affect the inertia value and the quality of the model.
 The problem with the initilization of K-Means is placing the initial cluster centers as close to the optimal center as possible. However the optimal center is not known, that is after all what we are trying to find. In most k-means algorithms the start positions are randomly chosen and the centers are then improved with each iteration. However these randomly chosen start points can vary alot and can result in more iterations needed and therefore longer runtime.  
 There are other initilization methods such and k-means++ and naive sharding that aim to get better start positions for the center points, resulting in fewer iterations and better runtime. The preferred method in Sklearn library is "K-means++" that is build around pushing the start position centers as far away from eachother.
 
