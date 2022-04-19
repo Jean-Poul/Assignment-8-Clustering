@@ -19,7 +19,9 @@ Its also a quite useful tool for finding anomalies/outliers in the data.
 It also used alot in document classification. To find similarities in documents by converting the text into vectors.   
 Lastly it can be used in market analysation and can be used to group customers into clusters and use this information in marketing or product recommendations.
 #### DBSCAN use cases
-
+DBSCAN, also known as Density Based Spatial Clustering of Applications with Noise, is a clustering algorithm for unsupervised learning problems.
+It is used to find the density of data and does this very well with seperating the low density from the high density. It also works extremely well with finding outliers.
+The DBSCAN algorithm can be used to find associations and structures in data that are hard to find manually but that can be relevant and useful to find patterns and predict trends.
 
 ### Task 3, Thinking about these two algorithms provide a formal definition of clustering
 Clustering is a technique used in machine learning to group data together. Usually, if the algorithm is used correctly, data with similiar characteristics(features) will be grouped together. And likewise data with dissimiliar characteristics should not be grouped together. These grouped are referred to as clusters.
