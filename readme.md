@@ -29,6 +29,12 @@ Clustering is a technique used in machine learning to group data together. Usual
 
 
 ### Task 4, Describe with examples of plotting two ways of selecting the value of K for K-means clustering
+#### Elbow method
+The elbow method uses the sum of squared errors(between each point and the mean of its cluster) to find the optimal K. The higher K you use the lower error rate you will get. However we also dont want to many clusters as we then lose any meaning in grouping the data together. Usually we will see an elbow in the graph, after this point higher K values will result in small improvement in the error value. Therefore we want to choose the K value that are just a the Elbow point.
+
+![Elbow Method taken from the Walkthrough in the book](https://user-images.githubusercontent.com/21145015/163997780-e0f2ea14-8b56-4aec-a3eb-bec2292cb878.jpg)
+
+#### silhouette method
 
 
 ### Task 5, Which algorithm is good for large datasets and which one is good for regions of high density 
