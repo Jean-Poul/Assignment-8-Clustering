@@ -15,14 +15,13 @@ We followed the guide in chapter 20 of the Data science from scratch book. The r
 Since K-means is a clustering algorithms its use cases are primarily finding similarity in the data.  
 This means that we can use it when processing pictures.  
 Both for changing(scaling, pixel colors) the image or finding other similiar pictures in a search engine.     
-Its also a quite useful tool for finding anomalies/outliers in the data.  
 It also used alot in document classification. To find similarities in documents by converting the text into vectors.   
-Lastly it can be used in market analysation and can be used to group customers into clusters and use this information in marketing or product recommendations.
+Lastly it can be used in market segmentation and can be used to group customers into clusters and use this information in marketing or product recommendations.
 #### DBSCAN use cases
 DBSCAN, also known as Density Based Spatial Clustering of Applications with Noise, is a clustering algorithm for unsupervised learning problems.     
 It is used to find the density of data and does this very well with seperating the low density from the high density.     
-It also works extremely well with finding outliers.     
-The DBSCAN algorithm can be used to find associations and structures in data that are hard to find manually but that can be relevant and useful to find patterns and predict trends.
+It also works extremely well with finding outliers and when working with irregular shaped clusters.
+The DBSCAN algorithm can be used to find associations and structures in data that are hard to find manually but that can be relevant and useful to find patterns and predict trends. 
 
 ### Task 3, Thinking about these two algorithms provide a formal definition of clustering
 Clustering is a technique used in machine learning to group data together. Usually, if the algorithm is used correctly, data with similiar characteristics(features) will be grouped together. And likewise data with dissimiliar characteristics should not be grouped together. These grouped are referred to as clusters.
@@ -34,11 +33,20 @@ The elbow method uses the sum of squared errors(between each point and the mean 
 
 ![Elbow Method taken from the Walkthrough in the book](https://user-images.githubusercontent.com/21145015/163997780-e0f2ea14-8b56-4aec-a3eb-bec2292cb878.jpg)
 
-#### silhouette method
+#### Silhouette method
+The silhouette method uses the seperation distance between clusters. The measurement is between -1 & 1, where 1 is preffered. With a higher score the values in the clusters are well seperated, where as negative values means that the clusters are very close together and might indicate that values have been assigned to a wrong cluster. That means the optimal K value will the one with the highest silhouette score. However we might also consider the size of each cluster and decide another "worse" K value where the clusters are more evenly distributed.
+
+The following screenshots are from the SKlearn documentation. In this example (depending on the use case) K=4 is the better option, event though 2 has a higher silhouette value, because the clusters are much more evenly distributed with K=4 than with K=2.
+![Silhouette with K2](https://user-images.githubusercontent.com/21145015/164001923-6c0bb60d-d148-48d8-8f0b-378fb598c055.jpg)
+![Silhouette with K4](https://user-images.githubusercontent.com/21145015/164001928-f500b389-c2bf-41b8-96ab-f83696746056.jpg)
+![Results from 2-6 K values](https://user-images.githubusercontent.com/21145015/164001927-3dc5a8ae-a435-4f15-93b6-990cdf771ad7.jpg)
+
+
+Reference: [SKlearn Doc](https://scikit-learn.org/stable/auto_examples/cluster/plot_kmeans_silhouette_analysis.html)
 
 
 ### Task 5, Which algorithm is good for large datasets and which one is good for regions of high density 
 
-### Task 6,
-### Task 7,
+### Task 6, What does ‘high density mean’ in DBSCAN
+### Task 7, Describe with an example how the initialisation of K Means can affect the inertia value and the quality of the model.
 ### Task 8,
