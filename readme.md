@@ -54,7 +54,7 @@ DBSCAN stands for Density Based Spatial Clustering of Applications with Noise. H
 
 ### Task 7, Describe with an example how the initialization of K-Means can affect the inertia value and the quality of the model.
 The problem with the initialization of K-Means is placing the initial cluster centers as close to the optimal center as possible. However the optimal center is not known, that is after all what we are trying to find. In most k-means algorithms the start positions are randomly chosen and the centers are then improved with each iteration. However these randomly chosen start points can vary alot and can result in more iterations needed and therefore longer runtime.  
-There are other initialization methods such and k-means++ and naive sharding that aim to get better start positions for the center points, resulting in fewer iterations and better runtime. The preferred method in Sklearn library is "K-means++" that is build around pushing the start position centers as far away from eachother.
+There are other initialization methods such and k-means++ and naive sharding that aim to get better start positions for the center points, resulting in fewer iterations and better runtime. The preferred method in Sklearn library is "K-means++" that is build around pushing the start position centers as far away from eachother. <br>
 The following illustration show k-means iterations to find the centeriod for K=3. [Reference](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68)
 
 ![Iterating the K-Means algorithms to find the best K Value](https://miro.medium.com/max/480/1*KrcZK0xYgTa4qFrVr0fO2w.gif)
